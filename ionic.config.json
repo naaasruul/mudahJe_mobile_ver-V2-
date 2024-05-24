@@ -1,0 +1,7 @@
+{
+  "name": "mudahJeV2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
