@@ -1,0 +1,51 @@
+
+<ion-router-outlet id="search-content"></ion-router-outlet>
+<ion-menu menuId="search-menu" contentId="search-content">
+  
+  <ion-content class="ion-padding">
+    <!-- <ion-button (click)="openSearchMenu()">Click to open the menu</ion-button> -->
+    <ion-searchbar [(ngModel)]="searchQuery" (ionChange)="filterItems()"></ion-searchbar>
+  
+    <!-- selected item append in here -->
+      <div *ngIf="selectedItems">
+        <div [innerHTML]="selectedItemsDisplay"></div>
+      </div>
+  
+    <ion-list>
+      <ion-item (click)="selectItems(item)" *ngFor="let item of filteredItems">
+        {{ item }}
+      </ion-item>
+    </ion-list>
+  
+     <!-- Submit button -->
+     <ion-button (click)="submitSelectedItems()">Submit</ion-button>
+  </ion-content>
+</ion-menu>
+
+<ion-content id="content">
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons (click)="openSearchMenu()" slot="start">
+        <ion-icon size="large" name="menu-outline"></ion-icon>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- <ion-button>Click to open the menu</ion-button> -->
+  
+  <!-- Display selected fruit details -->
+<ion-card *ngIf="selectedItemDetails.length > 0">
+  <ion-card-header>
+    <ion-card-title>{{ selectedItemDetails[currentIndex].name }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <img [src]="selectedItemDetails[currentIndex].img" *ngIf="selectedItemDetails[currentIndex].img" alt="{{ selectedItemDetails[currentIndex].name }}">
+    <p>{{ selectedItemDetails[currentIndex].details }}</p>
+  </ion-card-content>
+  <!-- "Next" button -->
+  <ion-button (click)="goToNextItem()">Next</ion-button> 
+</ion-card>
+
+</ion-content>

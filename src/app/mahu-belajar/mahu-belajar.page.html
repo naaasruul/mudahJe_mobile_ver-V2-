@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Search</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- selected item append in here -->
+  <div *ngIf="selectedItems">
+    <div [innerHTML]="selectedItemsDisplay"></div>
+  </div>
+
+  <ion-list>
+    <ion-item (click)="selectItems(item)" *ngFor="let item of filteredItems">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+
+  <ion-button (click)="submitSelectedItems()">Submit</ion-button>
+</ion-content>
