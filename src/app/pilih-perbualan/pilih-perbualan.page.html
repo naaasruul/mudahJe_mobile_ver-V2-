@@ -22,16 +22,16 @@
     <div>
       <ion-grid>
         <ion-row>
-          <ion-col [routerLink]="['/choose-activity/',123]">
+          <ion-col [routerLink]="['/choose-activity/','greeting']">
             <div class="notes-menu">
               <ion-icon class="searchIcon" name="search-outline"></ion-icon>
               <h5><strong>Greeting</strong></h5>
             </div>
           </ion-col>
-          <ion-col>
+          <ion-col [routerLink]="['/choose-activity/','family']">
             <div class="notes-menu">
               <ion-icon class="searchIcon" name="search-outline"></ion-icon>
-              <h5><strong>Greeting</strong></h5>
+              <h5><strong>Family</strong></h5>
             </div>
           </ion-col>
         </ion-row>
