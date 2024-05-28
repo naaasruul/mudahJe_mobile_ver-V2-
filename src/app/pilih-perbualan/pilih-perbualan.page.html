@@ -1,13 +1,72 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>pilihPerbualan</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">pilihPerbualan</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="mudahJeNav">
+    <div>
+      <img src="assets/images/logoMudahJe.jpg" alt="">
+    </div>
+    <div>
+      <h5><strong>Welcome to Mudah Je</strong></h5>
+    </div>
+
+    <div>
+      <ion-buttons [routerLink]="['/mahu-belajar']">
+        <ion-icon class="searchIcon" name="search-outline"></ion-icon>
+      </ion-buttons>
+    </div>
+  </div>
+
+  <section class="content">
+    <div class="py-2">
+      <h2><strong>Choose a topic</strong></h2>
+    </div>
+
+    <div>
+      <ion-grid>
+        <ion-row>
+          <ion-col [routerLink]="['/choose-activity/',123]">
+            <div class="notes-menu">
+              <ion-icon class="searchIcon" name="search-outline"></ion-icon>
+              <h5><strong>Greeting</strong></h5>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="notes-menu">
+              <ion-icon class="searchIcon" name="search-outline"></ion-icon>
+              <h5><strong>Greeting</strong></h5>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <div class="notes-menu">
+              <ion-icon class="searchIcon" name="search-outline"></ion-icon>
+              <h5><strong>Greeting</strong></h5>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="notes-menu">
+              <ion-icon class="searchIcon" name="search-outline"></ion-icon>
+              <h5><strong>Greeting</strong></h5>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <div class="notes-menu">
+              <ion-icon class="searchIcon" name="search-outline"></ion-icon>
+              <h5><strong>Greeting</strong></h5>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="notes-menu">
+              <ion-icon class="searchIcon" name="search-outline"></ion-icon>
+              <h5><strong>Greeting</strong></h5>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </section>
+  <!--  -->
 </ion-content>

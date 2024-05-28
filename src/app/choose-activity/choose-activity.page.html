@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true">
+  <div class="mudahJeNav">
+    <div>
+      <img src="assets/images/logoMudahJe.jpg" alt="">
+    </div>
+    <div>
+      <h5><strong>Welcome to Mudah Je</strong></h5>
+    </div>
+
+    <div>
+      <ion-buttons [routerLink]="['/mahu-belajar']">
+        <ion-icon class="searchIcon" name="search-outline"></ion-icon>
+      </ion-buttons>
+    </div>
+  </div>
+
+  <section class="content">
+    <div class="py-2">
+      <h2><strong>Choose a topic</strong></h2>
+    </div>
+    <h4>Select your learning mode</h4>
+
+    <div class="btn-container mt-2">
+      <ion-button [routerLink]="['/notes','greeting']"><strong>Notes</strong></ion-button>
+      <ion-button [routerLink]="['/exercise','greeting']"><strong>Exercise</strong></ion-button>
+    </div>
+    
+  </section>
+  <!--  -->
+</ion-content>

@@ -3,13 +3,13 @@
     <ion-title>Search</ion-title>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-searchbar></ion-searchbar>
+    <ion-searchbar [(ngModel)]="searchQuery" (ionChange)="filterItems()"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <!-- selected item append in here -->
-  <div *ngIf="selectedItems">
+  <div class="selectedItems-container" *ngIf="selectedItems">
     <div [innerHTML]="selectedItemsDisplay"></div>
   </div>
 

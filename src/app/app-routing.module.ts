@@ -34,6 +34,18 @@ const routes: Routes = [
   {
     path: 'selected-item-page',
     loadChildren: () => import('./selected-item-page/selected-item-page.module').then( m => m.SelectedItemPagePageModule)
+  },
+  {
+    path: 'choose-activity/:activityId',
+    loadChildren: () => import('./choose-activity/choose-activity.module').then( m => m.ChooseActivityPageModule)
+  },
+  {
+    path: 'notes/:activityId',
+    loadChildren: () => import('./activity/notes/notes.module').then( m => m.NotesPageModule)
+  },
+  {
+    path: 'exercise/:activityId',
+    loadChildren: () => import('./activity/exercise/exercise.module').then( m => m.ExercisePageModule)
   }
 ];
 

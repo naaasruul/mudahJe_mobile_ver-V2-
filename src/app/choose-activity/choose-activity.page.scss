@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 0.5em;
-    padding: 1em;
+    // padding: 1em;
 }
 
 .apps-desc{
@@ -14,20 +14,6 @@
     text-align: center;
 }
 
-.nav{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 4em;
-    align-items: center;
-    justify-content: space-between;
-    padding:1em;
-}
-.nav img {
-    height: 5em;
-    width: 60px;
-    object-fit: cover;
-}
 
 
 .searchIcon{
