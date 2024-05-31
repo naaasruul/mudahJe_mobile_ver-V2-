@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { ActivatedRoute } from '@angular/router'; // add router 1st, bila import kena update constructor.
                                                   // masukkan dalam bracket instead of curly bracket
-
 @Component({
   selector: 'app-choose-activity',
   templateUrl: './choose-activity.page.html',

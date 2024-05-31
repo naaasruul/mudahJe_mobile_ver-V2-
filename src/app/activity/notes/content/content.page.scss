@@ -1,0 +1,21 @@
+.selectedItem-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+
+ion-card-content{
+    // width: 500px;
+    height: 500px;
+    // object-fit: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.selectedItem-container .nextBtn{
+    width: 80%;
+    // margin: 1em;
+}

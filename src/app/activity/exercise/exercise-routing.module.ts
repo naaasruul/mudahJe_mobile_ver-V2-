@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: ExercisePage
+  },  {
+    path: 'content',
+    loadChildren: () => import('./content/content.module').then( m => m.ContentPageModule)
   }
+
 ];
 
 @NgModule({

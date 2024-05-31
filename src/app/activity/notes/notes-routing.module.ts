@@ -7,7 +7,12 @@ const routes: Routes = [
   {
     path: '',
     component: NotesPage
+  },
+  {
+    path: 'content/:contentId',
+    loadChildren: () => import('./content/content.module').then( m => m.ContentPageModule)
   }
+
 ];
 
 @NgModule({
