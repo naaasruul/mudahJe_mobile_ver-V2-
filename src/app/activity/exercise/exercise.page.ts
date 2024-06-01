@@ -1,36 +1,76 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActionSheetController } from '@ionic/angular';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-exercise',
   templateUrl: './exercise.page.html',
   styleUrls: ['./exercise.page.scss'],
 })
-export class ExercisePage {
+export class ExercisePage implements OnInit {
 
   currentIndex: number = 0;
   selectedOptionIndex: number | null = null;
-  questions = [
-    {
-      id: 1,
-      question: 'What is the capital of France?',
-      imageUrl: 'https://example.com/image1.jpg',
-      options: ['Berlin', 'Madrid', 'Paris', 'Rome'],
-      correctAnswer: 2 // Index of 'Paris' in the options array
-    },
-    {
-      id: 2,
-      question: 'Which planet is known as the Red Planet?',
-      imageUrl: 'https://example.com/image2.jpg',
-      options: ['Earth', 'Mars', 'Jupiter', 'Saturn'],
-      correctAnswer: 1 // Index of 'Mars' in the options array
-    },
-    // Add more questions as needed
-  ];
+  questions: any[] = [];
+  currentQuestion: any;
 
-  currentQuestion = this.questions[this.currentIndex];
+  constructor(
+    private actionSheetController: ActionSheetController,
+    private route: ActivatedRoute
+  ) { }
 
-  constructor(private actionSheetController: ActionSheetController) { }
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      const topic = params.get('topic') || 'default'; // Provide a default value if topic is null
+      this.questions = this.getQuestionsByTopic(topic);
+      this.currentQuestion = this.questions[this.currentIndex];
+    });
+  }
+  
+
+  getQuestionsByTopic(topic: string): any[] {
+    let filteredQuestions: { id: number, question: string, imageUrl?: string, options: string[], correctAnswer: number }[] = [];
+    if (topic === 'greeting') { // TOPIC MUST BE EQUAL TO THE ONE SHOWN IN THE URL EG:- /exercise/greeting
+      filteredQuestions = [
+        {
+          id: 1,
+          question: 'What is the date for this event?',
+          imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/fd/National_Park_Service_9-11_Statue_of_Liberty_and_WTC_fire.jpg',
+          options: ['11 September 2001', '11 September 2004', '9 November 2001', '2 June 2024'],
+          correctAnswer: 0
+        },
+        {
+          id: 2,
+          question: "Who's beautiful ass is this? 👅😜😜",
+          imageUrl: "assets/images/zaim.jpg",
+          options: ['John', 'Jane', 'Zaim', 'Bob'],
+          correctAnswer: 2
+        }
+      ];
+    } else if (topic === 'family') { // TOPIC MUST BE EQUAL TO THE ONE SHOWN IN THE URL EG:- /exercise/family
+      filteredQuestions = [
+        {
+          id: 1,
+          question: 'What is the capital of France?',
+          imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Ballon_Generali_and_the_Eiffel_Tower.jpg',
+          options: ['Berlin', 'Madrid', 'Paris', 'Rome'],
+          correctAnswer: 2 // index
+        },
+        {
+          id: 2,
+          question: 'Which planet is known as the Red Planet?',
+          imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg',
+          options: ['Earth', 'Mars', 'Jupiter', 'Saturn'],
+          correctAnswer: 1 // index
+        }
+      ];
+    }
+  
+    console.log('Loaded questions:', filteredQuestions);
+    return filteredQuestions;
+  }
+  
+  
 
   async selectAnswer(event: CustomEvent) {
     const selectedIndex = event.detail.value;

@@ -44,7 +44,8 @@ const routes: Routes = [
     loadChildren: () => import('./activity/notes/notes.module').then(m => m.NotesPageModule)
   },
   {
-    path: 'exercise/:activityId',
+    //// topic will be used in exercise.page.ts to determine the set of questions that will be shown
+    path: 'exercise/:topic',
     loadChildren: () => import('./activity/exercise/exercise.module').then(m => m.ExercisePageModule)
   },
   {

@@ -1,6 +1,6 @@
 <ion-content [fullscreen]="true">
-  <div class="quiz-container">
-    <div class="media-placeholder">
+  <div class="quiz-container" *ngIf="currentQuestion">
+    <div class="media-placeholder" *ngIf="currentQuestion.imageUrl">
       <img [src]="currentQuestion.imageUrl" alt="Media Content">
     </div>
     <div class="question">
