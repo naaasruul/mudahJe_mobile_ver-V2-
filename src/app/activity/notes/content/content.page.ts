@@ -12,7 +12,8 @@ export class ContentPage implements OnInit {
   items = [
     { id: 1, content: 'Item 1 content', imageUrl: 'https://ionicframework.com/docs/img/demos/card-media.png' },
     { id: 2, content: 'Item 2 content', imageUrl: 'https://ionicframework.com/docs/img/demos/card-media.png' },
-    { id: 3, content: 'Item 3 content', imageUrl: 'https://ionicframework.com/docs/img/demos/card-media.png' }
+    { id: 3, content: 'Item 3 content', imageUrl: 'https://ionicframework.com/docs/img/demos/card-media.png' },
+    { id: 4, content: 'Item 4 content', imageUrl: 'https://ionicframework.com/docs/img/demos/card-media.png' },
     // Add more items as needed
   ];
   currentIndex = 0;

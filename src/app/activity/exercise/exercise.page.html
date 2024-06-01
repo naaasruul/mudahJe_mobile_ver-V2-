@@ -1,13 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>exercise</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">exercise</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="quiz-container">
+    <div class="media-placeholder">
+      <img [src]="currentQuestion.imageUrl" alt="Media Content">
+    </div>
+    <div class="question">
+      <h2><strong>{{currentQuestion.question}}</strong></h2>
+    </div>
+    <ion-list>
+      <ion-radio-group [(ngModel)]="selectedOptionIndex" (ionChange)="selectAnswer($event)">
+        <ion-item *ngFor="let option of currentQuestion.options; let i = index">
+          <ion-label [attr.for]="'option-' + i" (click)="selectOption(i)">{{option}}</ion-label>
+          <ion-radio slot="start" [value]="i" [id]="'option-' + i"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </div>
 </ion-content>

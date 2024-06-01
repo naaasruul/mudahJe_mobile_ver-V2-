@@ -18,6 +18,7 @@ export class NotesPage implements OnInit {
     { id: 1, name: 'Activity 1' },
     { id: 2, name: 'Activity 2' },
     { id: 3, name: 'Activity 3' },
+    { id: 4, name: 'Activity 4' },
     // Add more activities as needed
   ];
 

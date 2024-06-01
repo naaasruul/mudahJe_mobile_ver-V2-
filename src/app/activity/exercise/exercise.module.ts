@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ExercisePageRoutingModule } from './exercise-routing.module';
 
 import { ExercisePage } from './exercise.page';
+import { ActivatedRoute } from '@angular/router';
 
 @NgModule({
   imports: [
