@@ -27,6 +27,10 @@ export class SelectedItemPagePage implements OnInit {
     });
   }
 
+  isVideo(url: string): boolean {
+    return url.endsWith('.mp4');
+  }
+
   goToNextItem() {
     if (this.currentIndex < this.selectedItemDetails.length - 1) {
       this.currentIndex++;

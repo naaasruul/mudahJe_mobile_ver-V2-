@@ -1,19 +1,25 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Selected Items</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <div class="selectedItem-container">
+    <!-- Display the current item -->
     <ion-card>
-      <ion-card-content>
-        <img [src]="items[currentIndex].imageUrl" alt="">
-        <!-- <p>{{ items[currentIndex].content }}</p> -->
+      <ion-card-content *ngIf="currentItem">
+        <!-- Conditionally display video or image based on file type -->
+        <ng-container *ngIf="isVideo(currentItem.imageUrl); else imageTemplate">
+          <video loop autoplay>
+            <source [src]="currentItem.imageUrl" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </ng-container>
+        <ng-template #imageTemplate>
+          <img [src]="currentItem.imageUrl" alt="">
+        </ng-template>
+        <h1 class="p-2">
+          <strong>{{currentItem.name}}</strong>
+        </h1>
       </ion-card-content>
     </ion-card>
-    
-    <h1><strong>{{items[currentIndex]["content"]}}</strong></h1> 
-    <ion-button (click)="nextBtn()" class="nextBtn">Next</ion-button>
+
+    <!-- Back button to navigate to the previous page -->
+    <ion-button (click)="backBtn(currentItem.category)" class="backBtn">Back</ion-button>
   </div>
 </ion-content>

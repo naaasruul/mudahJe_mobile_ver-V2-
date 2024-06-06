@@ -1,7 +1,8 @@
+
 <ion-content [fullscreen]="true">
   <div class="mudahJeNav">
 
-    <div>
+    <div [routerLink]="['/index']">
       <img src="assets/images/logoMudahJe.jpg" alt="">
     </div>
 
@@ -18,11 +19,14 @@
 
   <section class="content">
     <div class="py-2">
-      <h2><strong>{{activityId}}</strong></h2>
+      <h2><strong>{{category}}</strong></h2>
     </div>
     <h4>Choose your note</h4>
-    <div class="sub-note mt-3" *ngFor="let activity of activities">
-      <ion-button  [routerLink]="['content',activity.id]">{{activity.name}}</ion-button>
+
+
+    <!-- Show selected category -->
+    <div class="sub-note mt-3" *ngFor="let activity of filteredActivities">
+      <ion-button [routerLink]="['content',activity.category,activity.id]">{{activity.name}}</ion-button>
     </div>
 
     

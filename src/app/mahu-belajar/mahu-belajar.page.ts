@@ -18,7 +18,7 @@ interface Fruit {
 })
 export class MahuBelajarPage implements OnInit {
   
-  items: string[] = ['Apple', 'Banana', 'Orange', 'Mango', 'Pineapple'];
+  items: string[] = ['Assalammualaikum', 'Selamat Pagi Bapa', 'Terima Kasih', 'Bapa', 'Emak','Abang'];
   filteredItems: string[] = [];
   searchQuery: string = '';
   selectedItems: string[] = [];
@@ -28,11 +28,12 @@ export class MahuBelajarPage implements OnInit {
 
   selectedItemDetails: Fruit[] = [];
   fruits: Fruit[] = [
-    { name: 'Apple', img: 'assets/fruitsImg/apple.png', details: 'An apple a day keeps the doctor away.' },
-    { name: 'Banana', img: 'assets/fruitsImg/banana.jpg', details: 'lorem' },
-    { name: 'Orange', img: 'assets/fruitsImg/orange.webp', details: 'Bananas are rich in potassium.' },
-    { name: 'Pineapple', img: 'assets/fruitsImg/pineapple.jpg', details: 'Bananas are rich in potassium.' },
-    { name: 'Mango', img: 'assets/fruitsImg/Mango.jpg', details: 'Bananas are rich in potassium.' },
+    { name: 'Assalammualaikum', img: 'assets/videobahasaisyarat_mp4/Assalamualaikum.mp4', details: '' },
+    { name: 'Selamat Pagi Bapa', img: 'assets/fruitsImg/banana.jpg', details: '' },
+    { name: 'Terima Kasih', img: 'assets/videobahasaisyarat_mp4/terimaKasih.mp4', details: '.' },
+    { name: 'Bapa', img: 'assets/videobahasaisyarat_mp4/Bapa.mp4', details: 'Bananas are rich in potassium.' },
+    { name: 'Emak', img: 'assets/videobahasaisyarat_mp4/Emak.mp4', details: 'Bananas are rich in potassium.' },
+    { name: 'Abang', img: 'assets/videobahasaisyarat_mp4/Abang.mp4', details: 'Bananas are rich in potassium.' },
     // Add more fruits as needed
   ];
 

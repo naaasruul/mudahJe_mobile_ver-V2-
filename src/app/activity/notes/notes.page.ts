@@ -10,40 +10,54 @@ import { ActivatedRoute } from '@angular/router'; // add router 1st, bila import
 })
 export class NotesPage implements OnInit {
 
+  
   activityId: string = '';
   type: string = '';
   level: string = '';
+  category: string = ''; // Add a category property to store the current category
+
 
   activities = [
-    { id: 1, name: 'Activity 1' },
-    { id: 2, name: 'Activity 2' },
-    { id: 3, name: 'Activity 3' },
-    { id: 4, name: 'Activity 4' },
-    // Add more activities as needed
+    { id: 1, category:'greeting', name: 'Assalammualaikum' },
+    { id: 2, category:'greeting', name: 'Selamat Pagi Bapa' },
+    { id: 3, category:'greeting', name: 'Terima Kasih' },
+    { id: 1, category:'family', name: 'Bapa' },
+    { id: 2, category:'family', name: 'Emak' },
+    { id: 3, category:'family', name: 'Abang' },    // Add more activities as needed
   ];
-
-  content = [
-    { id: 1, name: '1'},
-    { id: 2, name: '2'},
-    { id: 3, name: '3'},
-    { id: 4, name: '4'},
-    { id: 5, name: '5'},
-    { id: 6, name: '6'},
-    { id: 7, name: '7'},
-    { id: 8, name: '8'},
-    { id: 9, name: '9'},
-    { id: 10, name:'10'},
-  ]
+  
+  // Explicitly declare the type of filteredActivities
+  filteredActivities: { id: number; category: string; name: string; }[] = [];
 
   constructor(private route: ActivatedRoute) { }
 
-  ngOnInit() {
-    this.route.paramMap.subscribe(params =>{
-      const id = params.get('activityId');
-      this.activityId = id ? id : ''; // Fallback to empty string if null
+    ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      // const id = params.get('activityId');
+      const category = params.get('activityId'); // Get the category from the route parameters
+      // this.activityId = id ? id : ''; // Fallback to empty string if null
+      this.category = category ? category : ''; // Fallback to empty string if null
 
-      console.log(id)
-    })
+      // console.log('Activity ID:', id);
+      console.log('Category:', category);
+
+      this.filterActivitiesByCategory();
+    });
   }
+
+
+
+  
+  filterActivitiesByCategory() {
+    // Filter activities based on the category specified in the route parameters
+    if (this.category) {
+      this.filteredActivities = this.activities.filter(activity => activity.category === this.category);
+    } else {
+      this.filteredActivities = []; // Reset filtered activities if no category is specified
+    }
+    console.log('Filtered Activities:', this.filteredActivities);
+  }
+
+
 
 }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { NotesPage } from './notes.page';
@@ -9,7 +9,7 @@ const routes: Routes = [
     component: NotesPage
   },
   {
-    path: 'content/:contentId',
+    path: 'content/:contentCategory/:contentId',
     loadChildren: () => import('./content/content.module').then( m => m.ContentPageModule)
   }
 
