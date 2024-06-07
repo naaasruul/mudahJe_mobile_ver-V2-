@@ -9,6 +9,7 @@
 .apps-desc{
     padding: 1em;
     text-align: center;
+    color: rgb(212, 212, 212);
 }
 
 .nav{
@@ -34,10 +35,16 @@
 .index-banner{
     position: relative;
     display: inline-block;
+    height: 40vh;
+    border-radius: 0 0 13px 13px;
+    overflow: hidden;
 }
 .index-banner img{
     display: block;
+    object-fit: cover;
     z-index: 0;
+    height: 100%;
+    // width: 100%;
 }
 
 .index-banner .banner-title{

@@ -26,24 +26,36 @@ export class ExercisePage implements OnInit {
       this.currentQuestion = this.questions[this.currentIndex];
     });
   }
-  
+
+    // Add this method to check if the media URL is a video
+    isVideoUrl(url: string): boolean {
+      const videoExtensions = ['.mp4', '.webm', '.ogg'];
+      return videoExtensions.some(ext => url.endsWith(ext));
+    }
 
   getQuestionsByTopic(topic: string): any[] {
-    let filteredQuestions: { id: number, question: string, imageUrl?: string, options: string[], correctAnswer: number }[] = [];
+    let filteredQuestions: { id: number, question: string, mediaUrl?: string, options: string[], correctAnswer: number }[] = [];
     if (topic === 'greeting') { // TOPIC MUST BE EQUAL TO THE ONE SHOWN IN THE URL EG:- /exercise/greeting
       filteredQuestions = [
         {
           id: 1,
-          question: 'What is the date for this event?',
-          imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/fd/National_Park_Service_9-11_Statue_of_Liberty_and_WTC_fire.jpg',
-          options: ['11 September 2001', '11 September 2004', '9 November 2001', '2 June 2024'],
+          question: '',
+          mediaUrl: 'assets/videobahasaisyarat_mp4/Assalamualaikum.mp4',
+          options: ['Assalammualaikum', 'Selamat Pagi Bapa', 'Terima Kasih'],
           correctAnswer: 0
         },
         {
           id: 2,
-          question: "Who's beautiful ass is this? 👅😜😜",
-          imageUrl: "assets/images/zaim.jpg",
-          options: ['John', 'Jane', 'Zaim', 'Bob'],
+          question: "",
+          mediaUrl: "assets/videobahasaisyarat_mp4/selamatPagiBapa.mp4",
+          options: ['Assalammualaikum', 'Selamat Pagi Bapa', 'Terima Kasih'],
+          correctAnswer: 1
+        },
+        {
+          id: 3,
+          question: "",
+          mediaUrl: "assets/videobahasaisyarat_mp4/terimaKasih.mp4",
+          options: ['Assalammualaikum', 'Selamat Pagi Bapa', 'Terima Kasih'],
           correctAnswer: 2
         }
       ];
@@ -51,17 +63,24 @@ export class ExercisePage implements OnInit {
       filteredQuestions = [
         {
           id: 1,
-          question: 'What is the capital of France?',
-          imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Ballon_Generali_and_the_Eiffel_Tower.jpg',
-          options: ['Berlin', 'Madrid', 'Paris', 'Rome'],
-          correctAnswer: 2 // index
+          question: '',
+          mediaUrl: 'assets/videobahasaisyarat_mp4/Bapa.mp4',
+          options: ['Emak', 'Bapa', 'Abang'],
+          correctAnswer: 1 // index
         },
         {
           id: 2,
+          question: '',
+          mediaUrl: 'assets/videobahasaisyarat_mp4/Emak.mp4',
+          options: ['Bapa', 'Abang', 'Emak'],
+          correctAnswer: 2 // index
+        },
+        {
+          id: 3,
           question: 'Which planet is known as the Red Planet?',
-          imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg',
-          options: ['Earth', 'Mars', 'Jupiter', 'Saturn'],
-          correctAnswer: 1 // index
+          mediaUrl: 'assets/videobahasaisyarat_mp4/Abang.mp4',
+          options: ['Emak', 'Bapa', 'Abang'],
+          correctAnswer: 2 // index
         }
       ];
     }
