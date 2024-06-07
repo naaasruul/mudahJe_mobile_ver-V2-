@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActionSheetController } from '@ionic/angular';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router  } from '@angular/router';
 
 @Component({
   selector: 'app-exercise',
@@ -16,7 +16,8 @@ export class ExercisePage implements OnInit {
 
   constructor(
     private actionSheetController: ActionSheetController,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router // Inject the Router service
   ) { }
 
   ngOnInit() {
@@ -114,10 +115,18 @@ export class ExercisePage implements OnInit {
     await actionSheet.present();
   }
 
+  
   nextQuestion() {
-    this.currentIndex = (this.currentIndex + 1) % this.questions.length;
-    this.currentQuestion = this.questions[this.currentIndex];
-    this.selectedOptionIndex = null; // Reset the selected option
+    if (this.currentIndex + 1 < this.questions.length) {
+      this.currentIndex++;
+      this.currentQuestion = this.questions[this.currentIndex];
+      this.selectedOptionIndex = null; // Reset the selected option
+    } else {
+      this.route.paramMap.subscribe(params => {
+        const topic = params.get('topic') || 'default'; // Provide a default value if topic is null
+        this.router.navigate(['choose-activity/',topic]); // Navigate to the previous page
+      });
+    }
   }
 
   selectOption(index: number) {
