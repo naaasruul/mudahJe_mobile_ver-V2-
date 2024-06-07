@@ -1,31 +1,30 @@
 <ion-content [fullscreen]="true">
   <div class="mudahJeNav">
-
     <div [routerLink]="['/index']">
       <img src="assets/images/logoMudahJe.jpg" alt="">
     </div>
-
     <div>
-      <h5><strong>Welcome to Mudah Je</strong></h5>
+      <h5><strong>Welcome to MudahJer</strong></h5>
     </div>
-
     <div>
       <ion-buttons [routerLink]="['/mahu-belajar']">
         <ion-icon class="searchIcon" name="search-outline"></ion-icon>
       </ion-buttons>
     </div>
   </div>
+
   <div class="quiz-container" *ngIf="currentQuestion">
     <div class="media-placeholder" *ngIf="currentQuestion.mediaUrl">
-      <video  *ngIf="isVideoUrl(currentQuestion.mediaUrl)" autoplay loop>
-        <source [src]="currentQuestion.mediaUrl" type="video/mp4">
+      <video *ngIf="isVideoUrl(currentQuestion.mediaUrl)" [src]="currentQuestion.mediaUrl" autoplay loop>
         Your browser does not support the video tag.
       </video>
       <img *ngIf="!isVideoUrl(currentQuestion.mediaUrl)" [src]="currentQuestion.mediaUrl" alt="Media Content">
     </div>
+    
     <div class="question">
-      <h3 class="p-2 ms-3"><strong>Choose ur answer:</strong></h3>
+      <h3 class="p-2 ms-3"><strong>Choose your answer:</strong></h3>
     </div>
+
     <ion-list>
       <ion-radio-group [(ngModel)]="selectedOptionIndex" (ionChange)="selectAnswer($event)">
         <ion-item *ngFor="let option of currentQuestion.options; let i = index" lines="none" class="option-item">
