@@ -42,22 +42,22 @@ export class ExercisePage implements OnInit {
           id: 1,
           question: '',
           mediaUrl: 'assets/videobahasaisyarat_mp4/Assalamualaikum.mp4',
-          options: ['Assalammualaikum', 'Selamat Pagi Bapa', 'Terima Kasih'],
+          options: ['Assalammualaikum', 'Apa Khabar?', 'Terima Kasih'],
           correctAnswer: 0
         },
         {
           id: 2,
           question: "",
-          mediaUrl: "assets/videobahasaisyarat_mp4/selamatPagiBapa.mp4",
-          options: ['Assalammualaikum', 'Selamat Pagi Bapa', 'Terima Kasih'],
+          mediaUrl: "assets/videobahasaisyarat_mp4/apaKhabar.mp4",
+          options: ['Terima Kasih','Apa Khabar?', 'Assalammualaikum'],
           correctAnswer: 1
         },
         {
           id: 3,
           question: "",
           mediaUrl: "assets/videobahasaisyarat_mp4/terimaKasih.mp4",
-          options: ['Assalammualaikum', 'Selamat Pagi Bapa', 'Terima Kasih'],
-          correctAnswer: 2
+          options: ['Terima Kasih', 'Assalammualaikum', 'Apa Khabar?'],
+          correctAnswer: 0
         }
       ];
     } else if (topic === 'family') { // TOPIC MUST BE EQUAL TO THE ONE SHOWN IN THE URL EG:- /exercise/family

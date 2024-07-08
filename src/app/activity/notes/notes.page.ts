@@ -19,7 +19,7 @@ export class NotesPage implements OnInit {
 
   activities = [
     { id: 1, category:'greeting', name: 'Assalammualaikum' },
-    { id: 2, category:'greeting', name: 'Selamat Pagi Bapa' },
+    { id: 2, category:'greeting', name: 'Apa Khabar?' },
     { id: 3, category:'greeting', name: 'Terima Kasih' },
     { id: 1, category:'family', name: 'Bapa' },
     { id: 2, category:'family', name: 'Emak' },

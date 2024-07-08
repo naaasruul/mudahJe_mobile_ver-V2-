@@ -10,7 +10,7 @@
 
     items =[
       { id: 1, category:'greeting', name: 'Assalammualaikum',imageUrl:'assets/videobahasaisyarat_mp4/Assalamualaikum.mp4'},
-      { id: 2, category:'greeting', name: 'Selamat Pagi Bapa',imageUrl:'assets/videobahasaisyarat_mp4/selamatPagiBapa.mp4' },
+      { id: 2, category:'greeting', name: 'Apa Khabar?',imageUrl:'assets/videobahasaisyarat_mp4/apaKhabar.mp4' },
       { id: 3, category:'greeting', name: 'Terima Kasih',imageUrl:'assets/videobahasaisyarat_mp4/terimaKasih.mp4' },
       { id: 1, category:'family', name: 'Bapa',imageUrl:'assets/videobahasaisyarat_mp4/Bapa.mp4' },
       { id: 2, category:'family', name: 'Emak',imageUrl:'assets/videobahasaisyarat_mp4/Emak.mp4' },
