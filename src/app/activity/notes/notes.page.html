@@ -1,0 +1,34 @@
+
+<ion-content [fullscreen]="true">
+  <div class="mudahJeNav">
+
+    <div [routerLink]="['/index']">
+      <img src="assets/images/logoMudahJe.jpg" alt="">
+    </div>
+
+    <div>
+      <h5><strong>Welcome to MudahJer</strong></h5>
+    </div>
+
+    <div>
+      <ion-buttons [routerLink]="['/mahu-belajar']">
+        <ion-icon class="searchIcon" name="search-outline"></ion-icon>
+      </ion-buttons>
+    </div>
+  </div>
+
+  <section class="content">
+    <div class="py-2">
+      <h2><strong>{{category}}</strong></h2>
+    </div>
+    <h4>Choose your note</h4>
+
+
+    <!-- Show selected category -->
+    <div class="sub-note mt-3" *ngFor="let activity of filteredActivities">
+      <ion-button [routerLink]="['content',activity.category,activity.id]">{{activity.name}}</ion-button>
+    </div>
+
+    
+  </section>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Selected Items</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="selectedItem-container">
+    <ion-card *ngIf="selectedItemDetails.length > 0">
+      <ion-card-content>
+        <ng-container *ngIf="isVideo(selectedItemDetails[currentIndex].img); else imageTemplate">
+          <video *ngIf="selectedItemDetails[currentIndex].img" [src]="selectedItemDetails[currentIndex].img" autoplay loop>
+            Your browser does not support the video tag.
+          </video>
+        </ng-container>
+        <ng-template #imageTemplate>
+          <img [src]="selectedItemDetails[currentIndex].img" *ngIf="selectedItemDetails[currentIndex].img" alt="{{ selectedItemDetails[currentIndex].name }}">
+        </ng-template>
+      </ion-card-content>
+    </ion-card>
+    
+    <h1><strong>{{ selectedItemDetails[currentIndex].name }}</strong></h1>
+    <ion-button class="nextBtn" (click)="goToNextItem()" *ngIf="currentIndex < selectedItemDetails.length - 1">Next</ion-button>
+    <ion-button class="nextBtn" *ngIf="currentIndex >= selectedItemDetails.length - 1" (click)="goHome()">Home</ion-button>
+  </div>
+</ion-content>

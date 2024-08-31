@@ -1,0 +1,46 @@
+video{
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    // margin-bottom: 1em;
+}
+
+.option-item {
+    margin-bottom: 10px;
+  }
+  
+  .option-container {
+    display: flex;
+    align-items: center;
+    background-color: #ff00ff; /* Magenta background color */
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .option-label {
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .option-radio {
+    display: none; /* Hide default radio */
+  }
+  
+  .option-item.ion-item {
+    --inner-padding-start: 0;
+  }
+  
+  .next-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  ion-button {
+    --background: #007bff; /* Blue background color */
+    width: 100%;
+    text-align: center;
+  }
+  

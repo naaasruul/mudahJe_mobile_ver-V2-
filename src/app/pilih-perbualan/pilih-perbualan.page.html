@@ -1,0 +1,164 @@
+<ion-content [fullscreen]="true">
+  <div class="mudahJeNav">
+    <div>
+      <img src="assets/images/logoMudahJe.jpg" alt="">
+    </div>
+    <div>
+      <h5><strong>Welcome to MudahJer</strong></h5>
+    </div>
+
+    <div>
+      <!-- search icon at top of screen -->
+      <ion-buttons [routerLink]="['/mahu-belajar']">
+        <ion-icon class="searchIcon" name="search-outline"></ion-icon>
+      </ion-buttons>
+    </div>
+  </div>
+
+  <section class="content">
+    <div class="py-2">
+      <h2><strong>Choose a topic</strong></h2>
+    </div>
+
+    <div>
+      <ion-grid>
+        <!-- 1 -->
+        <ion-row>
+          <ion-col [routerLink]="['/choose-activity/','greeting']">
+            <div class="notes-menu">
+              <ion-icon name="chatbubble-outline"></ion-icon>
+              <h5><strong>Ucapan</strong></h5>
+            </div>
+          </ion-col>
+          <ion-col [routerLink]="['/choose-activity/','family']">
+            <div class="notes-menu">
+              <ion-icon class="searchIcon" name="people-outline"></ion-icon>
+              <h5><strong>Keluarga</strong></h5>
+            </div>
+          </ion-col>
+        </ion-row>
+        <!-- 1 -->
+        
+        <!-- 2 -->
+        <ion-row>
+          <ion-col>
+            <div class="disabled-block">
+              <ion-icon class="searchIcon" name="chatbubbles-outline"></ion-icon>
+              <h5><strong>Kata Ganti Nama</strong></h5>
+            </div>
+          </ion-col>
+          <ion-col >
+            <div class="disabled-block">
+              <ion-icon class="searchIcon" name="help-circle-outline"></ion-icon>
+              <h5><strong>Kata Tanya</strong></h5>
+            </div>
+          </ion-col>
+        </ion-row>
+        <!-- 2 -->
+
+        <!-- 4 -->
+        <ion-row>
+          <ion-col >
+            <div class="disabled-block">
+              <ion-icon class="searchIcon" name="chatbubbles-outline"></ion-icon>
+              <h5><strong>Kata Penghubung</strong></h5>
+            </div>
+          </ion-col>
+          <ion-col >
+            <div class="disabled-block">
+              <ion-icon class="searchIcon" name="chatbubbles-outline"></ion-icon>
+              <h5><strong>Kata Bantu</strong></h5>
+            </div>
+          </ion-col>
+        </ion-row>
+        <!-- 4 -->
+
+        <!-- 4 -->
+        <ion-row>
+          <ion-col >
+            <div class="disabled-block">
+              <ion-icon class="searchIcon" name="sad-outline"></ion-icon>
+              <h5><strong>Perasaan</strong></h5>
+            </div>
+          </ion-col>
+          <ion-col >
+            <div class="disabled-block">
+              <ion-icon class="searchIcon" name="build-outline"></ion-icon>
+              <h5><strong>Kata Kerja</strong></h5>
+            </div>
+          </ion-col>
+        </ion-row>
+        <!-- 4 -->
+
+        <!-- 4 -->
+        <ion-row>
+          <ion-col >
+            <div class="disabled-block">
+              <ion-icon class="searchIcon" name="man-outline"></ion-icon>
+              <h5><strong>Kata Sifat</strong></h5>
+            </div>
+          </ion-col>
+          <ion-col >
+            <div class="disabled-block">
+              <ion-icon class="searchIcon" name="time-outline"></ion-icon>
+              <h5><strong>Masa</strong></h5>
+            </div>
+          </ion-col>
+        </ion-row>
+        <!-- 4 -->
+         
+        <!-- 4 -->
+        <ion-row>
+          <ion-col>
+            <div class="disabled-block">
+              <ion-icon class="searchIcon" name="bandage-outline"></ion-icon>
+              <h5><strong>Kecacatan</strong></h5>
+            </div>
+          </ion-col>
+          <ion-col >
+            <div class="disabled-block">
+              <ion-icon class="searchIcon" name="chatbox-ellipses-outline"></ion-icon>
+              <h5><strong>Komunikasi</strong></h5>
+            </div>
+          </ion-col>
+        </ion-row>
+        <!-- 4 -->
+
+        <!-- 4 -->
+        <ion-row>
+          <ion-col>
+            <div class="disabled-block">
+              <ion-icon class="searchIcon" name="home-outline"></ion-icon>
+              <h5><strong>Tempat & Bangunan</strong></h5>
+            </div>
+          </ion-col>
+          <ion-col >
+            <div class="disabled-block">
+              <ion-icon class="searchIcon" name="car-outline"></ion-icon>
+              <h5><strong>Pengangkutan</strong></h5>
+            </div>
+          </ion-col>
+        </ion-row>
+        <!-- 4 -->
+
+        <!-- 4 -->
+        <ion-row>
+          <ion-col>
+            <div class="disabled-block">
+              <ion-icon class="searchIcon" name="book-outline"></ion-icon>
+              <h5><strong>Pendidikan</strong></h5>
+            </div>
+          </ion-col>
+          <ion-col >
+            <div class="disabled-block">
+              <ion-icon class="searchIcon" name="shuffle-outline"></ion-icon>
+              <h5><strong>Rawak</strong></h5>
+            </div>
+          </ion-col>
+        </ion-row>
+        <!-- 4 -->
+      </ion-grid>
+    </div>
+  </section>
+  <!--  -->
+</ion-content>

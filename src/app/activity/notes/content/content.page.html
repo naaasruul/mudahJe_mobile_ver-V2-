@@ -1,0 +1,41 @@
+<ion-content>
+  <div class="mudahJeNav">
+
+    <div [routerLink]="['/index']">
+      <img src="assets/images/logoMudahJe.jpg" alt="">
+    </div>
+
+    <div>
+      <h5><strong>Welcome to MudahJer</strong></h5>
+    </div>
+
+    <div>
+      <ion-buttons [routerLink]="['/mahu-belajar']">
+        <ion-icon class="searchIcon" name="search-outline"></ion-icon>
+      </ion-buttons>
+    </div>
+  </div>
+  <div class="selectedItem-container">
+    <!-- Display the current item -->
+    <ion-card>
+      <ion-card-content *ngIf="currentItem">
+        <!-- Conditionally display video or image based on file type -->
+        <ng-container *ngIf="isVideo(currentItem.imageUrl); else imageTemplate">
+          <video loop autoplay>
+            <source [src]="currentItem.imageUrl" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </ng-container>
+        <ng-template #imageTemplate>
+          <img [src]="currentItem.imageUrl" alt="">
+        </ng-template>
+        <h1 class="p-2">
+          <strong>{{currentItem.name}}</strong>
+        </h1>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Back button to navigate to the previous page -->
+    <ion-button style="width: 80%;" (click)="backBtn(currentItem.category)" class="backBtn">Back</ion-button>
+  </div>
+</ion-content>

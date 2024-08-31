@@ -1,0 +1,55 @@
+.container{
+    margin: 0.8em 0.9em;
+}
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5em;
+    // padding: 1em;
+}
+
+.apps-desc{
+    padding: 1em;
+    text-align: center;
+}
+
+
+
+
+
+.index-banner{
+    position: relative;
+    display: inline-block;
+}
+.index-banner img{
+    display: block;
+    z-index: 0;
+}
+
+.index-banner .banner-title{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    bottom: 0; /* Adjust this to position the text vertically */
+    left: 0; /* Adjust this to position the text horizontally */
+    padding: 0.8em;
+}
+
+.index-banner .banner-title h4{
+    font-size: 2em;
+    color: aliceblue;
+}
+
+ion-card-title {
+    // --color: #52ffe4;
+    font-size: 1.8em;
+  }
+
+
+
+.notes-menu{
+    border: 0.5px solid rgb(145, 145, 145);
+    padding: 1em;
+    border-radius: 5px;
+}
