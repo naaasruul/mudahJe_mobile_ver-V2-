@@ -39,12 +39,13 @@
     border-radius: 0 0 13px 13px;
     overflow: hidden;
 }
-.index-banner img{
+.index-banner video{
     display: block;
-    object-fit: cover;
-    z-index: 0;
+    // object-fit: cover;
+    z-index: 2  ;
+
     height: 100%;
-    // width: 100%;
+    width: 100%;
 }
 
 .index-banner .banner-title{
@@ -54,11 +55,22 @@
     bottom: 0; /* Adjust this to position the text vertically */
     left: 0; /* Adjust this to position the text horizontally */
     padding: 0.8em;
+    text-align: left;
+    background: rgb(0,0,0);
+background: linear-gradient(360deg, rgba(0,0,0,0.9052871148459384) 24%, rgba(0,0,0,0.7372198879551821) 59%, rgba(255,255,255,0) 100%);
+opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1; /* Ensure the title is behind the controls */
+    pointer-events: none; /* Make the title non-clickable */
 }
 
-.index-banner .banner-title h4{
-    font-size: 2em;
+.index-banner .banner-title h5{
+    font-size: 1.8em;
     color: aliceblue;
+}
+
+.index-banner:hover .banner-title {
+    opacity: 1;
 }
 
 ion-card-title {

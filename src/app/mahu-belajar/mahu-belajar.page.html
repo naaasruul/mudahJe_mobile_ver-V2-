@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="relativeBox">
   <!-- selected item append in here -->
   <div class="selectedItems-container" *ngIf="selectedItems">
   <div [innerHTML]="selectedItemsDisplay"></div>
@@ -19,13 +19,13 @@
   </ion-item>
 </ion-list> -->
 
-<ion-list>
+<ion-list class="list">
   <ion-item (click)="selectItems(item)" [ngClass]="{'selected-chip': isSelected(item)}" *ngFor="let item of filteredItems">
     {{ item }}
   </ion-item>
   </ion-list>
-  <div class="w-100 d-flex justify-content-center mt-2">
-    <ion-button class="w-80" (click)="submitSelectedItems()">Submit</ion-button>
+  <div class="w-100 d-flex justify-content-center mt-2 ">
+    <ion-button class="w-80 absoluteBox" (click)="submitSelectedItems()">Submit</ion-button>
   </div>
 
 

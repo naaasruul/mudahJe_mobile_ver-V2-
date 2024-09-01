@@ -6,4 +6,17 @@ ion-item.selected-chip {
     background-color: #d1e0ff; /* Example selected color */
     color: #0056b3; /* Example text color for selected chip */
   }
-  
+  ion-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+
+.list{
+    margin-bottom:1em ;
+}
+
+.absoluteBox{
+    margin-bottom: 2em;
+}

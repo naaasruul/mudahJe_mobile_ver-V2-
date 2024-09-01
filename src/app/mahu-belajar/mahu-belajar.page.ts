@@ -18,19 +18,27 @@ export class MahuBelajarPage implements OnInit {
   items: string[] = [
     'Saya',
     'Awak',
-    'Anda',
+    'Sayang',
+    'Kawan',
     'Kamu',
-    'Khabar Baik',
-    'Assalammualaikum',
-    'Apa Khabar?',
+    'Tolong',
     'Terima Kasih',
-    'Sama-sama',
-    'Selamat Hari Jadi',
     'Tahniah',
-    'Bapa',
-    'Emak',
-    'Abang',
+    'Selamat Pagi',
+    'Selamat Jalan',
+    'Selamat Datang',
+    'Sama-sama',
+    'Maaf',
+    'Hai',
+    'Nenek',
     'Kakak',
+    'Emak',
+    'Datuk',
+    'Bapa',
+    'Adik Perempuan',
+    'Adik Lelaki',
+    'Abang',
+    // 'Tebuan Attack',
   ];
   filteredItems: string[] = [];
   searchQuery: string = '';
@@ -40,80 +48,131 @@ export class MahuBelajarPage implements OnInit {
   selectedItemDetails: Fruit[] = [];
   fruits: Fruit[] = [
     {
+      name: 'Tolong',
+      img: 'assets/mp4/kataTolong_tolong.mp4',
+      details: '',
+    },
+    {
+      name: 'Sayang',
+      img: 'assets/mp4/kataNama_sayang.mp4',
+      details: '',
+    },
+    {
       name: 'Saya',
-      img: 'assets/videobahasaisyarat_mp4/Saya.mp4',
+      img: 'assets/mp4/kataNama_saya.mp4',
       details: '',
     },
     {
-      name: 'Awak',
-      img: 'assets/videobahasaisyarat_mp4/Awak.mp4',
-      details: '',
-    },
-    {
-      name: 'Anda',
-      img: 'assets/videobahasaisyarat_mp4/Anda.mp4',
+      name: 'Kawan',
+      img: 'assets/mp4/kataNama_kawan.mp4',
       details: '',
     },
     {
       name: 'Kamu',
-      img: 'assets/videobahasaisyarat_mp4/Kamu.mp4',
+      img: 'assets/mp4/kataNama_kamu.mp4',
       details: '',
     },
     {
-      name: 'Khabar Baik',
-      img: 'assets/videobahasaisyarat_mp4/khabarBaik.mp4',
+      name: 'Awak',
+      img: 'assets/mp4/kataNama_awak.mp4',
       details: '',
     },
     {
-      name: 'Assalammualaikum',
-      img: 'assets/videobahasaisyarat_mp4/Assalamualaikum.mp4',
-      details: '',
-    },
-    {
-      name: 'Apa Khabar?',
-      img: 'assets/videobahasaisyarat_mp4/apaKhabar.mp4',
-      details: '',
-    },
-    {
-      name: 'Terima Kasih',
-      img: 'assets/videobahasaisyarat_mp4/terimaKasih.mp4',
-      details: '.',
-    },
-    {
-      name: 'Sama-sama',
-      img: 'assets/videobahasaisyarat_mp4/Sama-sama.mp4',
-      details: '.',
-    },
-    {
-      name: 'Selamat Hari Jadi',
-      img: 'assets/videobahasaisyarat_mp4/selamatHariJadi.mp4',
-      details: '.',
-    },
-    {
-      name: 'Tahniah',
-      img: 'assets/videobahasaisyarat_mp4/Tahniah.mp4',
-      details: '.',
-    },
-    {
-      name: 'Bapa',
-      img: 'assets/videobahasaisyarat_mp4/Bapa.mp4',
-      details: '',
-    },
-    {
-      name: 'Emak',
-      img: 'assets/videobahasaisyarat_mp4/Emak.mp4',
-      details: '',
-    },
-    {
-      name: 'Abang',
-      img: 'assets/videobahasaisyarat_mp4/Abang.mp4',
+      name: 'Nenek',
+      img: 'assets/mp4/keluarga_nenek.mp4',
       details: '',
     },
     {
       name: 'Kakak',
-      img: 'assets/videobahasaisyarat_mp4/Kakak.mp4',
+      img: 'assets/mp4/keluarga_kakak.mp4',
+      details: '.',
+    },
+    {
+      name: 'Emak ',
+      img: 'assets/mp4/keluarga_emak.mp4',
+      details: '.',
+    },
+    {
+      name: 'Datuk',
+      img: 'assets/mp4/keluarga_datuk.mp4',
+      details: '.',
+    },
+    {
+      name: 'Bapa',
+      img: 'assets/mp4/keluarga_bapa.mp4',
+      details: '.',
+    },
+    {
+      name: 'Adik Perempuan',
+      img: 'assets/mp4/keluarga_adikPerempuan.mp4',
       details: '',
     },
+    {
+      name: 'Adik Lelaki',
+      img: 'assets/mp4/keluarga_adikLelaki.mp4',
+      details: '',
+    },
+    {
+      name: 'Abang',
+      img: 'assets/mp4/keluarga_abang.mp4',
+      details: '',
+    },
+    {
+      name: 'Terima Kasih',
+      img: 'assets/mp4/ucapan_terimaKasih.mp4',
+      details: '',
+    },
+    {
+      name: 'Tahniah',
+      img: 'assets/mp4/ucapan_tahniah.mp4',
+      details: '',
+    },
+    {
+      name: 'Abang',
+      img: 'assets/mp4/keluarga_abang.mp4',
+      details: '',
+    },
+    {
+      name: 'Selamat Pagi',
+      img: 'assets/mp4/ucapan_selamatPagi.mp4',
+      details: '',
+    },
+    {
+      name: 'Selamat Jalan',
+      img: 'assets/mp4/ucapan_selamatJalan.mp4',
+      details: '',
+    },
+    {
+      name: 'Selamat Datang',
+      img: 'assets/mp4/ucapan_selamatDatang.mp4',
+      details: '',
+    },
+    {
+      name: 'Sama-sama',
+      img: 'assets/mp4/ucapan_samasama.mp4',
+      details: '',
+    },
+    {
+      name: 'Maaf',
+      img: 'assets/mp4/ucapan_maaf.mp4',
+      details: '',
+    },
+    {
+      name: 'Hai',
+      img: 'assets/mp4/ucapan_hai.mp4',
+      details: '',
+    },
+    {
+      name: 'Assalammualaikum',
+      img: 'assets/mp4/ucapan_assalam.mp4',
+      details: '',
+    },
+    // {
+    //   name: 'Tebuan Attack',
+    //   img: 'assets/mp4/tebuan.mp4',
+    //   details: '',
+    // }
+    
   ];
 
   constructor(

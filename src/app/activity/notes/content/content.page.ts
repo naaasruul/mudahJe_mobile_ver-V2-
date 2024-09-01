@@ -7,14 +7,25 @@
     styleUrls: ['./content.page.scss'],
   })
   export class ContentPage implements OnInit {
-
+    
     items =[
-      { id: 1, category:'greeting', name: 'Assalammualaikum',imageUrl:'assets/videobahasaisyarat_mp4/Assalamualaikum.mp4'},
-      { id: 2, category:'greeting', name: 'Apa Khabar?',imageUrl:'assets/videobahasaisyarat_mp4/apaKhabar.mp4' },
-      { id: 3, category:'greeting', name: 'Terima Kasih',imageUrl:'assets/videobahasaisyarat_mp4/terimaKasih.mp4' },
-      { id: 1, category:'family', name: 'Bapa',imageUrl:'assets/videobahasaisyarat_mp4/Bapa.mp4' },
-      { id: 2, category:'family', name: 'Emak',imageUrl:'assets/videobahasaisyarat_mp4/Emak.mp4' },
-      { id: 3, category:'family', name: 'Abang',imageUrl:'assets/videobahasaisyarat_mp4/Abang.mp4' },      // Add more items as needed
+      { id: 1, category:'Ucapan', name: 'Terima Kasih',imageUrl:'assets/mp4/ucapan_terimaKasih.mp4'},
+      { id: 2, category:'Ucapan', name: 'Tahniah',imageUrl:'assets/mp4/ucapan_tahniah.mp4' },
+      { id: 3, category:'Ucapan', name: 'Selamat Pagi',imageUrl:'assets/mp4/ucapan_selamatPagi.mp4' },
+      { id: 4, category:'Ucapan', name: 'Selamat Jalan',imageUrl:'assets/mp4/ucapan_selamatJalan.mp4' },
+      { id: 5, category:'Ucapan', name: 'Selamat Datang',imageUrl:'assets/mp4/ucapan_selamatDatang.mp4' },
+      { id: 6, category:'Ucapan', name: 'Sama-sama',imageUrl:'assets/mp4/ucapan_samasama.mp4' },
+      { id: 7, category:'Ucapan', name: 'Maaf',imageUrl:'assets/mp4/ucapan_maaf.mp4' },
+      { id: 8, category:'Ucapan', name: 'Hai',imageUrl:'assets/mp4/ucapan_hai.mp4' },
+      { id: 9, category:'Ucapan', name: 'Assalammualaikum',imageUrl:'assets/mp4/ucapan_assalam.mp4' },
+      { id: 1, category:'Keluarga', name: 'Bapa',imageUrl:'assets/mp4/keluarga_bapa.mp4' },
+      { id: 2, category:'Keluarga', name: 'Emak',imageUrl:'assets/mp4/keluarga_emak.mp4' },
+      { id: 3, category:'Keluarga', name: 'Abang',imageUrl:'assets/mp4/keluarga_abang.mp4' },      // Add more items as needed
+      { id: 4, category:'Keluarga', name: 'Kakak',imageUrl:'assets/mp4/keluarga_kakak.mp4' },      // Add more items as needed
+      { id: 5, category:'Keluarga', name: 'Adik Perempuan',imageUrl:'assets/mp4/keluarga_adikPerempuan.mp4' },      // Add more items as needed
+      { id: 6, category:'Keluarga', name: 'Adik Lelaki',imageUrl:'assets/mp4/keluarga_adikLelaki.mp4' },      // Add more items as needed
+      { id: 7, category:'Keluarga', name: 'datuk',imageUrl:'assets/mp4/keluarga_datuk.mp4' },      // Add more items as needed
+      { id: 8, category:'Keluarga', name: 'Nenek',imageUrl:'assets/mp4/keluarga_Nenek.mp4' },      // Add more items as needed
     ];
 
 

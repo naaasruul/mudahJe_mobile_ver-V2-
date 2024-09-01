@@ -18,12 +18,23 @@ export class NotesPage implements OnInit {
 
 
   activities = [
-    { id: 1, category:'greeting', name: 'Assalammualaikum' },
-    { id: 2, category:'greeting', name: 'Apa Khabar?' },
-    { id: 3, category:'greeting', name: 'Terima Kasih' },
-    { id: 1, category:'family', name: 'Bapa' },
-    { id: 2, category:'family', name: 'Emak' },
-    { id: 3, category:'family', name: 'Abang' },    // Add more activities as needed
+    { id: 1, category:'Ucapan', name: 'Terima Kasih' },
+    { id: 2, category:'Ucapan', name: 'Tahniah' },
+    { id: 3, category:'Ucapan', name: 'Selamat Pagi' },
+    { id: 4, category:'Ucapan', name: 'Selamat Jalan' },
+    { id: 5, category:'Ucapan', name: 'Selamat Datang' },
+    { id: 6, category:'Ucapan', name: 'Sama-sama' },
+    { id: 7, category:'Ucapan', name: 'Maaf' },
+    { id: 8, category:'Ucapan', name: 'Hai' },
+    { id: 9, category:'Ucapan', name: 'Assalammualaikum' },
+    { id: 1, category:'Keluarga', name: 'Bapa' },
+    { id: 2, category:'Keluarga', name: 'Emak' },
+    { id: 3, category:'Keluarga', name: 'Nenek' },    // Add more activities as needed
+    { id: 4, category:'Keluarga', name: 'Kakak' },    // Add more activities as needed
+    { id: 5, category:'Keluarga', name: 'Abang' },    // Add more activities as needed
+    { id: 6, category:'Keluarga', name: 'Adik Perempuan' },    // Add more activities as needed
+    { id: 7, category:'Keluarga', name: 'Adik Lelaki' },    // Add more activities as needed
+    { id: 8, category:'Keluarga', name: 'Datuk' },    // Add more activities as needed
   ];
   
   // Explicitly declare the type of filteredActivities

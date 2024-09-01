@@ -36,51 +36,79 @@ export class ExercisePage implements OnInit {
 
   getQuestionsByTopic(topic: string): any[] {
     let filteredQuestions: { id: number, question: string, mediaUrl?: string, options: string[], correctAnswer: number }[] = [];
-    if (topic === 'greeting') { // TOPIC MUST BE EQUAL TO THE ONE SHOWN IN THE URL EG:- /exercise/greeting
+    if (topic === 'Ucapan') { // TOPIC MUST BE EQUAL TO THE ONE SHOWN IN THE URL EG:- /exercise/greeting
       filteredQuestions = [
         {
           id: 1,
           question: '',
-          mediaUrl: 'assets/videobahasaisyarat_mp4/Assalamualaikum.mp4',
+          mediaUrl: 'assets/mp4/ucapan_terimaKasih.mp4',
           options: ['Assalammualaikum', 'Apa Khabar?', 'Terima Kasih'],
-          correctAnswer: 0
-        },
+          correctAnswer: 2
+        },  
         {
           id: 2,
           question: "",
-          mediaUrl: "assets/videobahasaisyarat_mp4/apaKhabar.mp4",
-          options: ['Terima Kasih','Apa Khabar?', 'Assalammualaikum'],
+          mediaUrl: "assets/mp4/ucapan_tahniah.mp4",
+          options: ['Assalammualaikum','Tahniah', 'Terima Kasih'],
           correctAnswer: 1
         },
         {
           id: 3,
           question: "",
-          mediaUrl: "assets/videobahasaisyarat_mp4/terimaKasih.mp4",
-          options: ['Terima Kasih', 'Assalammualaikum', 'Apa Khabar?'],
+          mediaUrl: "assets/mp4/ucapan_selamatPagi.mp4",
+          options: ['Selamat Pagi', 'Selamat Malam', 'Selamat Petang'],
           correctAnswer: 0
+        },
+        {
+          id: 4,
+          question: "",
+          mediaUrl: "assets/mp4/ucapan_selamatJalan.mp4",
+          options: ['Selamat Jalan', 'Assalammualaikum', 'Apa Khabar?'],
+          correctAnswer: 0
+        },
+        {
+          id: 5,
+          question: "",
+          mediaUrl: "assets/mp4/ucapan_selamatDatang.mp4",
+          options: ['Sama-sama', 'Selamat Datang', 'Hi '],
+          correctAnswer: 1
         }
       ];
-    } else if (topic === 'family') { // TOPIC MUST BE EQUAL TO THE ONE SHOWN IN THE URL EG:- /exercise/family
+    } else if (topic === 'Keluarga') { // TOPIC MUST BE EQUAL TO THE ONE SHOWN IN THE URL EG:- /exercise/family
       filteredQuestions = [
         {
           id: 1,
           question: '',
-          mediaUrl: 'assets/videobahasaisyarat_mp4/Bapa.mp4',
+          mediaUrl: 'assets/mp4/keluarga_emak.mp4',
           options: ['Emak', 'Bapa', 'Abang'],
-          correctAnswer: 1 // index
+          correctAnswer: 0 // index
         },
         {
           id: 2,
           question: '',
-          mediaUrl: 'assets/videobahasaisyarat_mp4/Emak.mp4',
-          options: ['Bapa', 'Abang', 'Emak'],
+          mediaUrl: 'assets/mp4/keluarga_abang.mp4',
+          options: ['Bapa', 'Emak', 'Abang'],
           correctAnswer: 2 // index
         },
         {
           id: 3,
           question: 'Which planet is known as the Red Planet?',
-          mediaUrl: 'assets/videobahasaisyarat_mp4/Abang.mp4',
+          mediaUrl: 'assets/mp4/keluarga_bapa.mp4',
           options: ['Emak', 'Bapa', 'Abang'],
+          correctAnswer: 1// index
+        },
+        {
+          id: 4,
+          question: 'Which planet is known as the Red Planet?',
+          mediaUrl: 'assets/mp4/keluarga_adikPerempuan.mp4',
+          options: ['Adik Perempuan', 'Adik Lelaki', 'Abang'],
+          correctAnswer: 0 // index
+        },
+        {
+          id: 5,
+          question: 'Which planet is known as the Red Planet?',
+          mediaUrl: 'assets/mp4/keluarga_adikLelaki.mp4',
+          options: ['Kakak', 'Adik Perempuan', 'Adik Lelaki'],
           correctAnswer: 2 // index
         }
       ];
@@ -123,6 +151,7 @@ export class ExercisePage implements OnInit {
       this.selectedOptionIndex = null; // Reset the selected option
     } else {
       this.route.paramMap.subscribe(params => {
+        this.selectedOptionIndex = null; // Reset the selected option
         const topic = params.get('topic') || 'default'; // Provide a default value if topic is null
         this.router.navigate(['choose-activity/',topic]); // Navigate to the previous page
       });
